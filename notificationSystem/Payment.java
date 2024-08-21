@@ -9,6 +9,9 @@ public class Payment {
     private String status;
     private User sender;
     private User receiver;
+    public Payment() {
+    	
+    }
     public Payment(Long paymentId, Double amount, Date paymentDate, String status, User sender, User receiver) {
         this.paymentId = paymentId;
         this.amount = amount;

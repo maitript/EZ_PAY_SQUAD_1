@@ -9,13 +9,25 @@ public class Notification {
     private String status;
     private User sender;
     private User receiver;
-    public Notification(Long paymentId, Double amount, Date paymentDate, String status, User sender, User receiver) {
+    private String message;
+    
+    public String getMessage() {
+		return message;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	public Notification() {
+    	
+    }
+    public Notification(Long paymentId, Double amount, Date paymentDate, String status, User sender, User receiver,String message) {
         this.paymentId = paymentId;
         this.amount = amount;
         this.paymentDate = paymentDate;
         this.status = status;
         this.sender = sender;
         this.receiver = receiver;
+        this.message=message;
     }
     public Long getPaymentId() {
         return paymentId;
