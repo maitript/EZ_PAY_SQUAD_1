@@ -63,5 +63,12 @@ public class Notification {
     public void setReceiver(User receiver) {
         this.receiver = receiver;
     }
+    
+	@Override
+	public String toString() {
+		return "Notification [paymentId=" + paymentId + ", amount=" + amount + ", paymentDate=" + paymentDate
+				+ ", status=" + status + ", sender=" + sender + ", receiver=" + receiver + ", message=" + message + "]";
+	}
+    
 
 }
