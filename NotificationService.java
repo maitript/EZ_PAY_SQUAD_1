@@ -7,6 +7,7 @@ import EZPay.UI.noti.NotificationDAOImpl;
 
 public class NotificationService {
 
+    //Implements the notificationDAO interface
     private NotificationDAO notificationDAO;
 
     public NotificationService() {

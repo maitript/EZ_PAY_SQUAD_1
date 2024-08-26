@@ -1,6 +1,7 @@
 package EZPay.UI.noti;
 import java.util.Date;
 public class Notification {
+    // attributes
     private Long paymentId;
     private Double amount;
     private Date paymentDate;
@@ -9,6 +10,7 @@ public class Notification {
     private User receiver;
     private String message;
     
+    //getters and setters
     public String getMessage() {
 		return message;
 	}

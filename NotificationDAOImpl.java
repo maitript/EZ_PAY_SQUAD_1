@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NotificationDAOImpl implements NotificationDAO {
+
+    //used to establish a connection
     private Connection getConnection() throws SQLException {
    
         String url = "jdbc:oracle:thin:@localhost:1521:xe";
@@ -16,6 +18,8 @@ public class NotificationDAOImpl implements NotificationDAO {
         return DriverManager.getConnection(url, user, password);
     }
 
+
+    //saves a notification in the table
     @Override
     public void save(Notification notification) {
         String sql = "INSERT INTO notifications (payment_id, amount, payment_date, status, sender_id, receiver_id, message) VALUES (?, ?, ?, ?, ?, ?, ?)";
@@ -37,6 +41,7 @@ public class NotificationDAOImpl implements NotificationDAO {
         }
     }
 
+    //finds a notification by ID
     @Override
     public Notification findById(Long id) {
         String sql = "SELECT * FROM notifications WHERE payment_id = ?";
@@ -66,6 +71,7 @@ public class NotificationDAOImpl implements NotificationDAO {
         return notification;
     }
 
+    //Lists all the notifications
     @Override
     public List<Notification> findAll() {
         List<Notification> notifications = new ArrayList<>();
@@ -116,6 +122,8 @@ public class NotificationDAOImpl implements NotificationDAO {
         }
     }
 
+
+    //Deletes a notification by Id
     @Override
     public void delete(Long id) {
         String sql = "DELETE FROM notifications WHERE payment_id = ?";

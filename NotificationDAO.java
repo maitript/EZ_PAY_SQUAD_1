@@ -3,6 +3,7 @@ package EZPay.UI.noti;
 import EZPay.UI.noti.Notification;
 import java.util.List;
 
+//interface for the data access methods
 public interface NotificationDAO {
     void save(Notification notification);
     Notification findById(Long id);

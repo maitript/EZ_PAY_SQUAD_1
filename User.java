@@ -5,6 +5,9 @@ public class User {
     private String username;
     private String email;
     private String phoneNumber;
+
+
+    //getters and setters and constructor
     public User(Long userId, String username, String email, String phoneNumber) {
         this.userId = userId;
         this.username = username;

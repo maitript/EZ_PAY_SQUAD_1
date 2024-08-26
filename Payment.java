@@ -13,6 +13,7 @@ public class Payment {
     public Payment() {
     	
     }
+    //getters and setters and constructor
     public Payment(Long paymentId, Double amount, Date paymentDate, String status, User sender, User receiver) {
         this.paymentId = paymentId;
         this.amount = amount;
